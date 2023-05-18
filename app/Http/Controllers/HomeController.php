@@ -82,7 +82,7 @@ class HomeController extends Controller
 
         $todolists = todolist::get();
 
-        $todolists = todolist::with('user')->orderBy('id', 'desc')->paginate(15);
+        $todolists = todolist::with('user')->orderBy('id', 'desc')->paginate(5);
 
         return view('todolist.home', compact('todolists'));
     }

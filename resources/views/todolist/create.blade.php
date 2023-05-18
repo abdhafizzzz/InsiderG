@@ -24,8 +24,7 @@
             </div>
             <div class="col-md-6">
                 <label>Description:</label>
-                <textarea class="form-control" type="text" name="description" value="{{ old('description') }}">
-                </textarea>
+                <textarea class="form-control" type="text" name="description" value="{{ old('description') }}"></textarea>
                 @error('description')
                     <small class="text-danger">Sila masukkan description</small>
                 @enderror
