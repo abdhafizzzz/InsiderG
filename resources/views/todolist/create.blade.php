@@ -4,7 +4,7 @@
 
 
     <div class="container">
-        <a href="{{ url()->previous() }}" class='btn btn-info'>BACK</a>
+        <a href="{{ route('home') }}" class='btn btn-info'>BACK</a>
     <form action="{{ route('todolist.store') }}" method="POST">{{--route to submit on button--}}
         @csrf
         <div class="row">
