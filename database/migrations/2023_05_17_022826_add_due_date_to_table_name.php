@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('todolists', function (Blueprint $table) {
             $table->date('due_date')->after('description');
-            $table->integer('updated_by')->unsigned()->after('updated_at');
+            $table->integer('updated_by')->unsigned()->default(0)->after('updated_at');
         });
     }
 
