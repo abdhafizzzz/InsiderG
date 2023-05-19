@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,10 @@ Route::get('/edit/{id}', [HomeController::class, 'edit'])->name('todolist.edit')
 Route::post('/update', [HomeController::class, 'update'])->name('todolist.update');
 Route::get('/update/{id}', [HomeController::class, 'delete'])->name('todolist.delete');
 Route::get('/view', [HomeController::class, 'view'])->name('view');
+
+Route::get('/applicant', [ApplicantController::class, 'index'])->name('applicant.index');//applicant
+Route::get('/applicant/create', [ApplicantController::class, 'create'])->name('applicant.create');
+Route::post('/applicant/store', [ApplicantController::class, 'store'])->name('applicant.store');
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
