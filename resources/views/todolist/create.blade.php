@@ -4,7 +4,7 @@
 
 
     <div class="container">
-        <a href="{{ url()->previous() }}" class='btn btn-info'>BACK</a>
+        <a href="{{ route('home') }}" class='btn btn-info'>BACK</a>
     <form action="{{ route('todolist.store') }}" method="POST">{{--route to submit on button--}}
         @csrf
         <div class="row">
@@ -24,8 +24,7 @@
             </div>
             <div class="col-md-6">
                 <label>Description:</label>
-                <textarea class="form-control" type="text" name="description" value="{{ old('description') }}">
-                </textarea>
+                <textarea class="form-control" type="text" name="description" value="{{ old('description') }}"></textarea>
                 @error('description')
                     <small class="text-danger">Sila masukkan description</small>
                 @enderror
