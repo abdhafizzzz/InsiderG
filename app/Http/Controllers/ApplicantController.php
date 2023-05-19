@@ -41,6 +41,10 @@ class ApplicantController extends Controller
     public function store(Request $request)
     {
         //Validate the form data
+        'name'=>'required',
+        'ic_number' => 'required',
+        'D.O.B' => 'required',
+        'address' => 'required',
 
         $loggedUser = Auth::user();
         // dd($request); //for debugging...
